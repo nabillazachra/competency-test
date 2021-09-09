@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Rubik&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Rubik', sans-serif;
+}
+
+body {
+	line-height: 1.5;
+}
+
+.card {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 2);
+    border-radius: 5px;
+    padding: 50px;
+    margin: auto;
+    background-color: white;
+    width: max-content;
+    align-content: center;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: none;
+	height: 40%;
+}
+
+.container {
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+}
+
+.first {
+	flex: 1 0 40%;
+	padding: 15px;
+
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.second {
+	flex: 1 0 60%;
+	background: url('https://images.unsplash.com/photo-1630980942883-0d68b18c93c8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80');
+	background-size: cover;
+	background-position: center;
+}
+
+.result {
+	margin: 50px auto;
+	width: 550px;
+	height: 550px;
+	overflow: auto;
+}
+
+#form {
+	font-size: 15;
+}
+
+.button {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+ 
+.button .odd, .even, .prime, .reset {
+	margin-bottom: 20px;
+	width: 150px;
+	height: 50px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-weight: semi-bold;
+} 
+
+.odd {background-color: royalblue;}
+.even {background-color: darkmagenta;}
+.reset {background-color: red;}
+
+.button button:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+.position {
+	text-align: center;
+	padding-top: 5%;
+	font-size: 50px;
+}
+
+@media( max-width : 1000px) {
+	.result {
+		margin: 50px auto;
+		width: 350px;
+	}
+}
+
+@media( max-width : 320px) {
+	.result {
+		margin: 50px auto;
+		width: 200px;
+		overflow: scroll;
+	}
+}

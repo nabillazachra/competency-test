@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculate Discount</title>
+	<link rel="shortcut icon" href="https://avatars3.githubusercontent.com/u/34464790?s=220&v=4">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="first">
+			<h1>Dumbways Kelontong</h1>
+			<form id="form">
+				<div class="operand1">
+					<label for="input-1">Number</label>
+					<input type="number" name="input-1" id="input-1" placeholder="Input Number Here" required>
+				</div>
+				<div class="button">
+					<button type="button" class="odd" id="DumbWaysJos" onclick="hitungVoucher('DumbWaysJos')">DumbWaysJos</button>
+					<button type="button" class="even" id="DumbWaysMantap" onclick="hitungVoucher('DumbWaysMantap')">DumbWaysMantap</button>
+					<button type="reset" class="reset">Reset</button>
+				</div>
+			</form>
+		</div>
+		<div class="second">
+			<div class="result card">
+				<h1>Calculate</h1>
+			<div class="position">
+				 <div id="result-display"></div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

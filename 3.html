@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soal Nomor 3</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			--tw-bg-opacity: 1;
+			background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+		}
+	</style>
+</head>
+<body>
+	<div id="result"></div>
+
+	<script>
+		var arrayString = ["a", "l" , "a", "g", "c", "g", "c", "d", "o", "d", "o", "l"];
+
+		var checkDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) != index);
+		var array = checkDuplicates(arrayString);
+
+		document.getElementById('result').innerHTML = array;
+	</script>
+</body>
+</html>
