@@ -1,0 +1,41 @@
+{{> header}}
+{{> navbar}}
+<div class="container mb-5">
+<div class="mt-5 d-flex flex-row justify-content-between mar-bot">
+    <h1 class="text-light fw-bold">Heroes.</h1>
+    <button class="btn btn-primary text-uppercase btn-sm-lg" style="height: 40px !important;"><a href="/add-heroes" class="text-decoration-none text-light">Add data</a></button>
+</div>
+<hr class="text-light">
+    <table class="table table-dark table-hover">
+    <thead>
+        <tr>
+        <th scope="col">No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Type</th>
+        <th scope="col">Control</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        {{#each heroes}}    
+        <th scope="row">{{this.id}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.photo}}</td>
+            <td>{{this.type}}</td>
+            <td>
+                <div class="text-start">
+                    <a href="/edit-heroes/{{this.id}}">
+                        Edit
+                    </a> | 
+                    <a href="/delete-heroes/{{this.id}}">
+                        Delete
+                    </a>
+                </div>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </table>
+</div>
+{{> footer}}

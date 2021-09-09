@@ -1,0 +1,21 @@
+{{> header}}
+{{> navbar}}
+<h1 class="text-center text-light mt-5">Heroes List.</h1>
+<div class="mt-5 d-flex flex-row justify-content-center mb-3">
+    <button class="btn btn-primary text-uppercase btn-lg" ><a href="/add-heroes" class="text-decoration-none text-light">Add Hero</a></button>
+</div>
+<div class="container mb-5 d-flex flex-wrap justify-content-evenly flex-row">
+    {{#each heroes}}
+    <div class="card card-hover mt-5 mb-5 bg-dark" style="width: 18rem;">
+        <img src="{{this.photo}}" class="card-img-top text-light" alt="{{this.name}}">
+        <div class="card-body shadow">
+            <a href="/detail-heroes/{{this.id}}" class="text-decoration-none"><h5 class="text-light fw-bold">{{this.name}}</h5></a>
+            <h6 class="text-muted">{{this.type}}</h6>
+            <a href="/edit-heroes/{{this.id}}" class="text-decoration-none text-success">Edit</a> <span class="text-light">-</span>
+            <a href="/delete-heroes/{{this.id}}" class="text-decoration-none text-danger">Delete</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+{{> footer}}
